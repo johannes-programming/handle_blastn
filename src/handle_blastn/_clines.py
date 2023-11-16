@@ -12,10 +12,10 @@ from ._summaries import *
 
 @_dataclasses.dataclass
 class Cline:
-    cmd: str = "blastn"
-    query: str
-    out: str
-    db: str
+    cmd:str="blastn"
+    db:str
+    query:str
+    out:str
     def __iter__(self):
         l = [
             self.cmd,
@@ -49,7 +49,7 @@ class Cline:
         return str(file)
     @classmethod
     @_contextlib.contextmanager
-    def manager(cls, *args, query, out, **kwargs):
+    def manager(cls, *args, query=None, out=None, **kwargs):
         if (query is None) or (out is None):
             inner_manager = _tmp.TemporaryDirectory()
         else:

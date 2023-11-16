@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "handle_blastn"
-version = "0.0.2"
+version = "0.1.2"
 description = "Handle blastn."
 readme = "README.rst"
 authors = [
@@ -19,7 +19,9 @@ classifiers = [
 ]
 keywords = ['blastn']
 dependencies = [
-    "Bio>=1.6.0",
+    "Bio>=1.6",
+    "wonderparse>=1.0.2",
+    "fileunity>=0.3",
 ]
 requires-python = ">=3.11"
 
