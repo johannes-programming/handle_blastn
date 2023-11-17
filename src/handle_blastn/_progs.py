@@ -7,7 +7,7 @@ def summarize(
     infile: str,
 ):
     summary = _summaries.Summary.from_file(infile)
-    return _fu.basics.TOMLUnit(vars(summary))
+    return _fu.TOMLUnit(vars(summary))
 
 def _query_format(query, query_format):
     if query_format != 'infer':
