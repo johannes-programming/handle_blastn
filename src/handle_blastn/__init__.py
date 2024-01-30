@@ -1,9 +1,8 @@
-import _progs
 import wonderparse as _wp
 
-from ._clines import *
-from ._summaries import *
-
+from ._clines import Cline
+from ._summaries import Summary
+from . import _progs
 
 def main(args=None):
     _wp.easymode.simple_run(
